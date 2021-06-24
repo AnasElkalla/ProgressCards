@@ -55,5 +55,9 @@ for (let i = 0; i < panels.length; i++) {
   panels[i].addEventListener("click", function () {
     removeActiveClasses();
     panels[i].classList.add("active");
+    for (let x = 0; x < i; x++) {
+      currentActive++;
+      update();
+    }
   });
 }
